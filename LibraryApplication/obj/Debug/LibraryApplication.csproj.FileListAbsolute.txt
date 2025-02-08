@@ -86,5 +86,3 @@ D:\dev\ASP_NET_LibraryApplication\LibraryApplication\bin\System.Text.Encodings.W
 D:\dev\ASP_NET_LibraryApplication\LibraryApplication\bin\System.Text.Json.xml
 D:\dev\ASP_NET_LibraryApplication\LibraryApplication\bin\System.Threading.Tasks.Extensions.xml
 D:\dev\ASP_NET_LibraryApplication\LibraryApplication\bin\System.ValueTuple.xml
-D:\dev\ASP_NET_LibraryApplication\LibraryApplication\bin\Oracle.ManagedDataAccess.dll
-D:\dev\ASP_NET_LibraryApplication\LibraryApplication\bin\Oracle.ManagedDataAccess.EntityFramework.dll

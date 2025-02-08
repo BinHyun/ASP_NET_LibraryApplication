@@ -1,37 +1,128 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Net;
+using System.Web;
 using System.Web.Mvc;
-using Oracle.ManagedDataAccess.Client;
+using LibraryApplication.Context;
+using LibraryApplication.Models;
 
 namespace LibraryApplication.Controllers
 {
     public class HomeController : Controller
     {
+        private LibraryDb db = new LibraryDb();
+
         // GET: Home
-        public string Index()
+        public ActionResult Index()
         {
-            string connectionString = "User Id=system;Password=1234;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=Local)))";
-            string resultMessage;
+            return View(db.Books.ToList());
+        }
 
-            using (OracleConnection conn = new OracleConnection(connectionString))
+        // GET: Home/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
             {
-                try
-                {
-                    conn.Open();
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Book book = db.Books.Find(id);
+            if (book == null)
+            {
+                return HttpNotFound();
+            }
+            return View(book);
+        }
 
-                    // DB 연결 성공 메시지
-                    using (OracleCommand cmd = new OracleCommand("SELECT SYSDATE FROM dual", conn))
-                    {
-                        object result = cmd.ExecuteScalar();
-                        resultMessage = $"✅ Oracle DB 연결 성공! 현재 DB 시간: {result}";
-                    }
-                }
-                catch (Exception ex)
-                {
-                    resultMessage = $"❌ Oracle DB 연결 실패: {ex.Message}";
-                }
+        // GET: Home/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Home/Create
+        // 초과 게시 공격으로부터 보호하려면 바인딩하려는 특정 속성을 사용하도록 설정하세요. 
+        // 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=317598을(를) 참조하세요.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Book_U,Title,Writer,Summary,Publisher,Published_data")] Book book)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Books.Add(book);
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
 
-            return resultMessage;
+            return View(book);
+        }
+
+        // GET: Home/Edit/5
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Book book = db.Books.Find(id);
+            if (book == null)
+            {
+                return HttpNotFound();
+            }
+            return View(book);
+        }
+
+        // POST: Home/Edit/5
+        // 초과 게시 공격으로부터 보호하려면 바인딩하려는 특정 속성을 사용하도록 설정하세요. 
+        // 자세한 내용은 https://go.microsoft.com/fwlink/?LinkId=317598을(를) 참조하세요.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "Book_U,Title,Writer,Summary,Publisher,Published_data")] Book book)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(book).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(book);
+        }
+
+        // GET: Home/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Book book = db.Books.Find(id);
+            if (book == null)
+            {
+                return HttpNotFound();
+            }
+            return View(book);
+        }
+
+        // POST: Home/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Book book = db.Books.Find(id);
+            db.Books.Remove(book);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

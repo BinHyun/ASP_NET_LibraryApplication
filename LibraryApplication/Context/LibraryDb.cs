@@ -9,7 +9,7 @@ namespace LibraryApplication.Context
 {
     public class LibraryDb :DbContext
     {
-        public LibraryDb (): base("name=dbname") { }
+        public LibraryDb (): base("name=DBCS") { }
         public DbSet<Book> Books { get; set; }
     }
 }
