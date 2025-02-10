@@ -2,6 +2,18 @@
 
 @{
     ViewBag.Title = "Index";
+
+    //?? 키워드는 값이 정의되지 않았을때 (null인 경우) 뒤에 값으로 대체한다.
+    int pageNum = ViewBag.Page ?? 1;
+
+    //전체 갯수
+    int totalCount = ViewBag.TotalCount ?? 0;
+
+    //한 페이지에서 보여줄 리스트의 갯수
+    int maxListCount = ViewBag.MaxListCount ?? 1;
+
+    //page의 갯수 (나머지가 있을 경우 올림 처리한다.)
+    int totalPageCount = Convert.ToInt32(Math.Ceiling((double)totalCount / maxListCount));
 }
 
 <h2>Index</h2>
@@ -56,3 +68,15 @@
 }
 
 </table>
+
+<!--paging-->
+<div class="text-center">
+    <div class="btn-group">
+        @for (int i = 1; i <= totalPageCount; i++)
+        {
+            <a class="btn btn-@(pageNum == i ? "primary" : "default")" href="?page=@i">@i</a>
+        }
+    </div>
+</div>
+
+

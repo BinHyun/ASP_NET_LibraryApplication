@@ -18,7 +18,38 @@ namespace LibraryApplication.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View(db.Books.ToList());
+            //하나의 페이지의 특정 갯수의 게시물 출력
+            int maxListCount = 3;
+
+            //페이지 넘버 (기본값)
+            int pageNum = 1;
+
+            //QueryString 즉 주소 파라미터에 page의 값이 null 아닌경우
+            //pageNum 라는 변수의 Convert 한 값을 담아준다.
+            if (Request.QueryString["page"] != null)
+                pageNum = Convert.ToInt32(Request.QueryString["page"]);
+
+            //Take 키워드는 db.Books 즉 모델에서 몇개를 가지고 올 것인지에 대한 것
+            //OrderBy 키워드는 쿼리문의 그 OrderBy 이다.
+            //Skip 키워드는 말 그대로 Skip의 의미
+            //(pageNum-1)* listCount 의 의미는 페이지가 넘어갈때 마다 곱하기를 하기 때문에 그만큼 Skip한 결과를 출력 한다. 
+            //즉 0, 3, 6 과 같이 한번에 보여줄 리스트는 3개 이기 때문에, 3개씩 Skip하기 위함이다.
+            var books = db.Books.OrderBy(x => x.Book_U).Skip((pageNum-1)* maxListCount).Take(maxListCount).ToList();
+
+            //ViewBag에 담아서 view로 값을 넘겨준다.
+            ViewBag.Page = pageNum;
+
+            //db.Books의 갯수
+            ViewBag.TotalCount = db.Books.Count();
+
+            //listCount 값
+            ViewBag.MaxListCount = maxListCount;
+
+            //paging에 대해 정리를 해보자면, 일단 데이터를 가져와 정렬을 한다. 
+            //그 뒤 화면에서 몇개의 row로 보여줄지 정한다.
+            //마지막으로 view에서는 가지고 온 전체 데이터의 갯수 / 몇개의 row로 보여줄 값으로 나눠준다.
+            //즉 (전체 데이터의 갯수 / 화면의 출력할 row의 갯수)
+            return View(books);
         }
 
         // GET: Home/Details/5
