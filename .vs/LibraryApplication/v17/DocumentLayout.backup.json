@@ -9,6 +9,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|d:\\dev\\asp_net_libraryapplication\\libraryapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|solutionrelative:libraryapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|d:\\dev\\asp_net_libraryapplication\\libraryapplication\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|solutionrelative:libraryapplication\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "LibraryApplication\\Models\\Book.cs",
+              "ToolTip": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication\\Models\\Book.cs",
+              "RelativeToolTip": "LibraryApplication\\Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T16:11:47.304Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -32,7 +49,7 @@
               "RelativeDocumentMoniker": "LibraryApplication\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "LibraryApplication\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEUAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAFAAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-09T11:47:51.712Z",
               "EditorCaption": ""
@@ -45,7 +62,7 @@
               "RelativeDocumentMoniker": "LibraryApplication\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication\\Controllers\\HomeController.cs",
               "RelativeToolTip": "LibraryApplication\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACoAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAwF4AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-08T06:37:55.181Z",
               "EditorCaption": ""

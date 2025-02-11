@@ -24,6 +24,14 @@ namespace LibraryApplication.Controllers
             //페이지 넘버 (기본값)
             int pageNum = 1;
 
+            //검색값 (없다면 빈값으로 받는다.)
+            string keyword = Request.QueryString["keyword"] ?? string.Empty;
+
+            //검색값에 대한 옵션
+            string searchKind = Request.QueryString["searchKind"] ?? string.Empty;
+
+            int totalCount = 0;
+
             //QueryString 즉 주소 파라미터에 page의 값이 null 아닌경우
             //pageNum 라는 변수의 Convert 한 값을 담아준다.
             if (Request.QueryString["page"] != null)
@@ -34,16 +42,57 @@ namespace LibraryApplication.Controllers
             //Skip 키워드는 말 그대로 Skip의 의미
             //(pageNum-1)* listCount 의 의미는 페이지가 넘어갈때 마다 곱하기를 하기 때문에 그만큼 Skip한 결과를 출력 한다. 
             //즉 0, 3, 6 과 같이 한번에 보여줄 리스트는 3개 이기 때문에, 3개씩 Skip하기 위함이다.
-            var books = db.Books.OrderBy(x => x.Book_U).Skip((pageNum-1)* maxListCount).Take(maxListCount).ToList();
+            //var books = db.Books.OrderBy(x => x.Book_U).Skip((pageNum-1)* maxListCount).Take(maxListCount).ToList();
+
+            //검색을 위해 books를 빈 리스트로 설정한다.
+            var books = new List<Book>();
+
+            //검색값이 없다면, 전체 내용을 가져와 페이징에 맞게 출력한다.
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                books = db.Books.OrderBy(x => x.Book_U).Skip((pageNum - 1) * maxListCount).Take(maxListCount).ToList();
+
+                totalCount = db.Books.Count();
+            }
+            else
+            {
+                switch (searchKind)
+                {
+                    case "Title":
+                        //만약 검색값이 있다면, Title 정보를 가져와 검색값이 포함되는지 확인 후 출력한다.
+                        //즉 Where 키워드는 쿼리의 WHERE절 역할이며, Contains는 일종의 LIKE문과 같다.
+                        books = db.Books.Where(x => x.Title.Contains(keyword)).ToList();
+                        totalCount = db.Books.Where(x => x.Title.Contains(keyword)).Count();
+                        break;
+
+                    case "Writer":
+                        books = db.Books.Where(x => x.Writer.Contains(keyword)).ToList();
+                        totalCount = db.Books.Where(x => x.Writer.Contains(keyword)).Count();
+                        break;
+
+                    case "Publisher":
+                        books = db.Books.Where(x => x.Publisher.Contains(keyword)).ToList();
+                        totalCount = db.Books.Where(x => x.Publisher.Contains(keyword)).Count();
+                        break;
+                }
+
+                books = books.OrderBy(x => x.Book_U).Skip((pageNum - 1) * maxListCount).Take(maxListCount).ToList();
+            }
 
             //ViewBag에 담아서 view로 값을 넘겨준다.
             ViewBag.Page = pageNum;
 
             //db.Books의 갯수
-            ViewBag.TotalCount = db.Books.Count();
+            ViewBag.TotalCount = totalCount;
 
             //listCount 값
             ViewBag.MaxListCount = maxListCount;
+
+            //검색유형의 값
+            ViewBag.SearchKind = searchKind;
+
+            //검색값
+            ViewBag.Keyword = keyword;
 
             //paging에 대해 정리를 해보자면, 일단 데이터를 가져와 정렬을 한다. 
             //그 뒤 화면에서 몇개의 row로 보여줄지 정한다.
