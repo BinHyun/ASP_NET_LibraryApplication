@@ -50,9 +50,9 @@ namespace LibraryApplication.Controllers
             //검색값이 없다면, 전체 내용을 가져와 페이징에 맞게 출력한다.
             if (string.IsNullOrWhiteSpace(keyword))
             {
-                books = db.Books.OrderBy(x => x.Book_U).Skip((pageNum - 1) * maxListCount).Take(maxListCount).ToList();
+                books = db.Books.ToList();
 
-                totalCount = db.Books.Count();
+                totalCount = books.Count();
             }
             else
             {
@@ -62,22 +62,23 @@ namespace LibraryApplication.Controllers
                         //만약 검색값이 있다면, Title 정보를 가져와 검색값이 포함되는지 확인 후 출력한다.
                         //즉 Where 키워드는 쿼리의 WHERE절 역할이며, Contains는 일종의 LIKE문과 같다.
                         books = db.Books.Where(x => x.Title.Contains(keyword)).ToList();
-                        totalCount = db.Books.Where(x => x.Title.Contains(keyword)).Count();
+                        totalCount = books.Count();
                         break;
 
                     case "Writer":
                         books = db.Books.Where(x => x.Writer.Contains(keyword)).ToList();
-                        totalCount = db.Books.Where(x => x.Writer.Contains(keyword)).Count();
+                        totalCount = books.Count();
                         break;
 
                     case "Publisher":
                         books = db.Books.Where(x => x.Publisher.Contains(keyword)).ToList();
-                        totalCount = db.Books.Where(x => x.Publisher.Contains(keyword)).Count();
+                        totalCount = books.Count();
                         break;
                 }
 
-                books = books.OrderBy(x => x.Book_U).Skip((pageNum - 1) * maxListCount).Take(maxListCount).ToList();
             }
+
+            books = books.OrderBy(x => x.Book_U).Skip((pageNum - 1) * maxListCount).Take(maxListCount).ToList();
 
             //ViewBag에 담아서 view로 값을 넘겨준다.
             ViewBag.Page = pageNum;
