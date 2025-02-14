@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "D:\\dev\\ASP_NET_LibraryApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{30E87F73-7178-4B17-BB74-5FF80F33BE25}|LibraryApplication.Library\\LibraryApplication.Library.csproj|d:\\dev\\asp_net_libraryapplication\\libraryapplication.library\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30E87F73-7178-4B17-BB74-5FF80F33BE25}|LibraryApplication.Library\\LibraryApplication.Library.csproj|solutionrelative:libraryapplication.library\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88173958-44A2-456D-974B-2EEFC0179716}|LibraryApplication.Library\\LibraryApplication.Library.csproj|d:\\dev\\asp_net_libraryapplication\\libraryapplication.library\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88173958-44A2-456D-974B-2EEFC0179716}|LibraryApplication.Library\\LibraryApplication.Library.csproj|solutionrelative:libraryapplication.library\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|D:\\dev\\ASP_NET_LibraryApplication\\libraryapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|d:\\dev\\asp_net_libraryapplication\\libraryapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|solutionrelative:libraryapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|d:\\dev\\asp_net_libraryapplication\\libraryapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|D:\\dev\\ASP_NET_LibraryApplication\\libraryapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|solutionrelative:libraryapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -40,9 +40,9 @@
               "RelativeDocumentMoniker": "LibraryApplication.Library\\Class1.cs",
               "ToolTip": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication.Library\\Class1.cs",
               "RelativeToolTip": "LibraryApplication.Library\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T15:17:58.758Z",
+              "WhenOpened": "2025-02-14T16:47:53.784Z",
               "EditorCaption": ""
             },
             {
@@ -55,8 +55,7 @@
               "RelativeToolTip": "LibraryApplication\\Models\\Book.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T16:11:47.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T16:11:47.304Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "LibraryApplication\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAEcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-09T11:47:51.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-09T11:47:51.712Z"
             },
             {
               "$type": "Document",
@@ -79,7 +77,7 @@
               "RelativeDocumentMoniker": "LibraryApplication\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication\\Controllers\\HomeController.cs",
               "RelativeToolTip": "LibraryApplication\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAwFAAAABwAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAwEQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-08T06:37:55.181Z",
               "EditorCaption": ""

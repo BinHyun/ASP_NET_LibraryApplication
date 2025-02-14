@@ -1,15 +1,22 @@
-﻿namespace LibraryApplication.Library
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
+
+namespace LibraryApplication.Library
 {
     public class CommonLibrary
     {
         public string GetUrl(string paramType)
         {
-            string returnValue = string.Empty; 
+            string returnValue = string.Empty;
 
-            switch(paramType)
+            switch (paramType)
             {
                 case "full":
-                    //returnValue = HttpCon
+                    returnValue = HttpContext.Current.Request.Url.AbsolutePath;
                     break;
             }
 

@@ -1,0 +1,6 @@
+D:\dev\ASP_NET_LibraryApplication\LibraryApplication.Library\bin\Debug\LibraryApplication.Library.dll
+D:\dev\ASP_NET_LibraryApplication\LibraryApplication.Library\bin\Debug\LibraryApplication.Library.pdb
+D:\dev\ASP_NET_LibraryApplication\LibraryApplication.Library\obj\Debug\LibraryApplication.Library.csproj.AssemblyReference.cache
+D:\dev\ASP_NET_LibraryApplication\LibraryApplication.Library\obj\Debug\LibraryApplication.Library.csproj.CoreCompileInputs.cache
+D:\dev\ASP_NET_LibraryApplication\LibraryApplication.Library\obj\Debug\LibraryApplication.Library.dll
+D:\dev\ASP_NET_LibraryApplication\LibraryApplication.Library\obj\Debug\LibraryApplication.Library.pdb
