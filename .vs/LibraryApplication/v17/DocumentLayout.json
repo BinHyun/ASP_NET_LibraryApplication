@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\dev\\ASP_NET_LibraryApplication\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|d:\\dev\\asp_net_libraryapplication\\libraryapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|solutionrelative:libraryapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{88173958-44A2-456D-974B-2EEFC0179716}|LibraryApplication.Library\\LibraryApplication.Library.csproj|d:\\dev\\asp_net_libraryapplication\\libraryapplication.library\\commonlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88173958-44A2-456D-974B-2EEFC0179716}|LibraryApplication.Library\\LibraryApplication.Library.csproj|solutionrelative:libraryapplication.library\\commonlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88173958-44A2-456D-974B-2EEFC0179716}|LibraryApplication.Library\\LibraryApplication.Library.csproj|d:\\dev\\asp_net_libraryapplication\\libraryapplication.library\\urlparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88173958-44A2-456D-974B-2EEFC0179716}|LibraryApplication.Library\\LibraryApplication.Library.csproj|D:\\dev\\ASP_NET_LibraryApplication\\libraryapplication.library\\urlparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88173958-44A2-456D-974B-2EEFC0179716}|LibraryApplication.Library\\LibraryApplication.Library.csproj|solutionrelative:libraryapplication.library\\urlparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|D:\\dev\\ASP_NET_LibraryApplication\\libraryapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|solutionrelative:libraryapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|D:\\dev\\ASP_NET_LibraryApplication\\libraryapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|solutionrelative:libraryapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D36A9E6-6F6D-4648-84C5-FC3C006ECA71}|LibraryApplication\\LibraryApplication.csproj|D:\\dev\\ASP_NET_LibraryApplication\\libraryapplication\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "LibraryApplication\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "LibraryApplication\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-16T11:40:27.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UrlParameter.cs",
               "DocumentMoniker": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication.Library\\UrlParameter.cs",
               "RelativeDocumentMoniker": "LibraryApplication.Library\\UrlParameter.cs",
@@ -51,13 +64,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CommonLibrary.cs",
               "DocumentMoniker": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication.Library\\CommonLibrary.cs",
               "RelativeDocumentMoniker": "LibraryApplication.Library\\CommonLibrary.cs",
               "ToolTip": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication.Library\\CommonLibrary.cs",
               "RelativeToolTip": "LibraryApplication.Library\\CommonLibrary.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAIwFQAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwCoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-14T16:47:53.784Z",
               "EditorCaption": ""
@@ -77,18 +90,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "LibraryApplication\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "LibraryApplication\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEcAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-09T11:47:51.712Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\dev\\ASP_NET_LibraryApplication\\LibraryApplication\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "LibraryApplication\\Controllers\\HomeController.cs",

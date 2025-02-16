@@ -17,7 +17,7 @@ namespace LibraryApplication.Library
             {
                 case "full":
                     returnValue = HttpContext.Current.Request.Url.AbsoluteUri;
-                    //(전체진입경로)https://localhost:44399/
+                    //(루트경로)https://localhost:44399/
                     break;
 
                 case "path":
@@ -40,7 +40,7 @@ namespace LibraryApplication.Library
                 string[] paramArr = null;
 
                 string[] urlArr = url.Split('?');
-                if (urlArr.Count() > 0)
+                if (urlArr.Count() > 1)
                 {
                     paramArr = urlArr[1].Split('&');
                     //paramArr[0] = searchKind=Title
